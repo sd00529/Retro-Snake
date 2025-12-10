@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!-- Game surface -->
+    <com.example.retrosnake.GameView
+        android:id="@+id/gameSurface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- GameOver image (inside playable area) -->
+    <ImageView
+        android:id="@+id/gameOverImage"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:src="@drawable/gameover"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="550dp" />
+
+    <!-- Restart button inside yellow box (inside playable area) -->
+    <Button
+        android:id="@+id/btnRestart"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="RESTART"
+        android:textSize="18sp"
+        android:background="#FFFF44"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="400dp" />
+
+    <!-- Exit button inside red box (inside playable area) -->
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="EXIT"
+        android:textSize="18sp"
+        android:background="#E53935"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="350dp" />
+
+    <!-- Direction buttons (Control Pad) -->
+    <LinearLayout
+        android:id="@+id/controlPad"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="#22FFFFFF">
+
+        <ImageButton
+            android:id="@+id/btnUp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/arrow_up" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btnLeft"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/arrow_left" />
+
+            <View
+                android:layout_width="80dp"
+                android:layout_height="80dp" />
+
+            <ImageButton
+                android:id="@+id/btnRight"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/arrow_right" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnDown"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/arrow_down" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
